@@ -1,0 +1,24 @@
+@import "config";
+body{
+    font: {
+        family: Verdana, Geneva, Tahoma, sans-serif;
+        size: $font-size;
+    }
+}
+section{
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $vertical_padding $horizontal_padding;
+    line-height: 30px;
+  }
+  section:nth-child(odd){
+    background-color: map-get($colors,one);
+    color: $text-color2;
+  }
+  section:nth-child(even){
+    background-color: map-get($colors,four);
+    color: $text-color1;
+  }
