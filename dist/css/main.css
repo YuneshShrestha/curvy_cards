@@ -85,4 +85,70 @@ section {
 .green_bubble {
   background-color: #88e688;
 }
+
+.red_box {
+  background-color: red;
+}
+
+.red_box .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.red_box .wave svg {
+  position: relative;
+  display: block;
+  width: calc(108% + 1.3px);
+  height: 166px;
+}
+
+.red_box .wave .shape-fill {
+  fill: #202731;
+}
+
+.pink_container {
+  background-color: #E34E67;
+}
+
+.spacer {
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.layer {
+  background-image: url("../svg/layered-waves-haikei.svg");
+  z-index: 2;
+}
+
+.top_wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.top_wave svg {
+  position: relative;
+  display: block;
+  width: calc(107% + 1.3px);
+  height: 112px;
+}
+
+.top_wave .shape-fill {
+  fill: #202731;
+}
 /*# sourceMappingURL=main.css.map */
