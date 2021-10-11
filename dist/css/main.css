@@ -69,4 +69,20 @@ section {
           transform: translate(-2.5%, 40.5%);
   z-index: -1;
 }
+
+.bubble::after {
+  content: '';
+  height: 85%;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  border-top-right-radius: 50% 100%;
+  border-top-left-radius: 50% 100%;
+  background-color: #88e688;
+  z-index: -1;
+}
+
+.green_bubble {
+  background-color: #88e688;
+}
 /*# sourceMappingURL=main.css.map */
