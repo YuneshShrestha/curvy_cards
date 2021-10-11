@@ -1,24 +1,52 @@
 @import "config";
+@mixin pseudo {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+}
 body{
     font: {
         family: Verdana, Geneva, Tahoma, sans-serif;
         size: $font-size;
     }
+    overflow-x: hidden;
+    background-color: $bg-color;
 }
 section{
+    position: relative;
     min-height: 400px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: $vertical_padding $horizontal_padding;
     line-height: 30px;
+    z-index: 0;
+  
   }
-  section:nth-child(odd){
-    background-color: map-get($colors,one);
-    color: $text-color2;
+  .one{
+    background-color: map-get($map: $colors, $key: one);
   }
-  section:nth-child(even){
-    background-color: map-get($colors,four);
-    color: $text-color1;
+  .curve{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+  }
+  .curve::before {
+    @include pseudo();
+    transform: translate(85.1%, 63.1%);
+    background-color: $bg-color;
+  }
+  
+
+  .curve::after {
+    @include pseudo();
+    background-color: map-get($map: $colors, $key: one );
+    transform: translate(-2.5%, 40.5%);
+    z-index: -1;
   }
